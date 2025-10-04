@@ -1,0 +1,86 @@
+# -------------------------------
+# Python & Environment
+# -------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+logs/
+*.out
+
+# Byte-compiled / cache
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# -------------------------------
+# IDE / Editors
+# -------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# -------------------------------
+# Environment variables / secrets
+# -------------------------------
+.env
+.env.*
+*.secret
+*.key
+
+# -------------------------------
+# Database files (if using SQLite)
+# -------------------------------
+*.db
+*.sqlite3
+
+# -------------------------------
+# Test / coverage
+# -------------------------------
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+
+# -------------------------------
+# Jupyter / Notebooks
+# -------------------------------
+.ipynb_checkpoints
+
+# -------------------------------
+# Mypy / Type checking / Ruff
+# -------------------------------
+.mypy_cache/
+.pytype/
+.ruff_cache/
+
+# -------------------------------
+# Docker / Container
+# -------------------------------
+*.pid
+*.sock
+.env.docker
+docker-compose.override.yml
+
+# -------------------------------
+# OS specific
+# -------------------------------
+Thumbs.db
+ehthumbs.db
