@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from fastapi.params import Depends
+from app.api.auth_handler import get_current_user
 from app.schemas.common import CreateResponse
 from app.schemas.product import ProductCreate, ProductOut
 from sqlalchemy.orm import Session
@@ -17,6 +18,5 @@ def get_all_products(db:Session = Depends(get_db)):
     return product.get_all_products(db)
 
 @router.post("/products/",response_model=CreateResponse)
-def create_product(payload:ProductCreate, db:Session = Depends(get_db)):
-    user_id=1
-    return product.create_product(db, payload, user_id)
+def create_product(payload:ProductCreate, db:Session = Depends(get_db),user = Depends(get_current_user)):
+    return product.create_product(db, payload, user.id)
