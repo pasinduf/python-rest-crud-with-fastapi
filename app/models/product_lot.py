@@ -17,5 +17,6 @@ class ProductLot(Base,AuditMixin):
     buyingPrice = Column(Numeric(precision=10, scale=2))
     sellingPrice = Column(Numeric(precision=10, scale=2))
 
-
-
+    #many to one
+    supplierId = Column(Integer, ForeignKey("suppliers.id"), nullable=False)
+    supplier = relationship("Supplier", back_populates ="lots")

@@ -26,3 +26,12 @@ class ProductOut(ProductBase):
     lots:list[ProductLotOut] = []
 
     model_config = ConfigDict(from_attributes=True)
+
+class ProductCreate(BaseModel):
+    categoryId:int
+    supplierId:int
+    name:str
+    unit:str
+    quantity:float
+    buyingPrice:float
+    sellingPrice:float
